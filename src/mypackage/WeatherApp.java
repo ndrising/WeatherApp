@@ -34,7 +34,8 @@ public class WeatherApp {
 
             System.out.println("天气信息：");
             for (String info : weatherInfo) {
-                if (!info.toLowerCase().contains(".gif")) {
+                // 过滤掉包含 ".gif" 和 ".jpg" 的信息
+                if (!info.toLowerCase().contains(".gif") && !info.toLowerCase().contains(".jpg")) {
                     System.out.println(info);
                 }
             }
